@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
@@ -13,11 +14,27 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <img src="/img/rowlet.jpg" width="150px" height="150px" />
-        <div>kerusu</div>
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-md-6 justify-content-center row">
+              <Image
+                src="/img/rowlet.jpg"
+                width="250px"
+                height="250px"
+                className={styles.roundImage}
+              />
+            </div>
+            <div className="col-md-6">
+              <h1>kerusu</h1>
+              <ul>
+                <li>Programming</li>
+                <li>Pokemon</li>
+                <li>Shadowbox</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </main>
-
-      <footer>kerusu</footer>
     </div>
   );
 };
