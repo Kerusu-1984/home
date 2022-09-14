@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "../styles/Home.module.css";
 
@@ -17,7 +16,7 @@ const Home: NextPage = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-md-6 justify-content-center row">
-              <Image
+              <img
                 src="/img/rowlet.jpg"
                 width="250px"
                 height="250px"
