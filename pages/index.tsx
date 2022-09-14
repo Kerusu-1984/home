@@ -14,16 +14,16 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <div className="container">
-          <div className="row align-items-center">
-            <div className="col-md-6 justify-content-center row">
+          <div className="row align-items-center flex g-5 py-5">
+            <div className="col-md-6">
               <img
                 src="/img/rowlet.jpg"
                 width="250px"
                 height="250px"
-                className={styles.roundImage}
+                className="d-block mx-auto rounded-circle"
               />
             </div>
-            <div className="col-md-6">
+            <div className="col-md-6 text-center text-md-start">
               <h1>kerusu</h1>
               <ul>
                 <li>Programming</li>
