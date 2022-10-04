@@ -26,6 +26,7 @@ const Home: NextPage = () => {
             </div>
             <div className="col-md-6 text-center text-md-start">
               <h1>kerusu</h1>
+              <p>筑波大で情報を科学しています</p>
               <ul
                 style={{ listStylePosition: "inside" }}
                 className="d-inline-block text-start ps-0 ps-md-4"
