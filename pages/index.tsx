@@ -39,9 +39,8 @@ const Home: NextPage = () => {
                   <FaTwitter size={30} color={"#00acee"} />
                 </a>
                 <a href="https://github.com/Kerusu-1984">
-                  <FaGithub size={30} />
+                  <FaGithub size={30} color={"#000"} />
                 </a>
-                <a href=""></a>
                 <FaDiscord size={30} color={"#7289da"} />
               </div>
             </div>
