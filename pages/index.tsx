@@ -29,7 +29,7 @@ const Home: NextPage = () => {
                 style={{ listStylePosition: "inside" }}
                 className="d-inline-block text-start ps-0 ps-md-4"
               >
-                <li className="text-start">Programming</li>
+                <li>Programming</li>
                 <li>Pokemon</li>
                 <li>Shadowbox</li>
               </ul>
