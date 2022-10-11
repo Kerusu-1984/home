@@ -1,10 +1,38 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Modal from "react-bootstrap/Modal";
 import styles from "../styles/Home.module.css";
 import { FaTwitter, FaGithub, FaDiscord } from "react-icons/fa";
 
 const Home: NextPage = () => {
+  const [count, setCount] = useState<number>(0);
+  const [show, setShow] = useState<boolean>(false);
+  const [password, setPassword] = useState("");
+
+  const handleClickImage = () => {
+    if (count === 10) {
+      setShow(true);
+      setCount(0);
+    }
+    setCount((prev) => {
+      return prev + 1;
+    });
+  };
+
+  const handleClose = () => setShow(false);
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setPassword(e.target.value);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    // Enterキーでデータを送信できるようにする
+    if (e.nativeEvent.isComposing || e.key !== "Enter") return;
+    // TODO:API呼び出し
+    handleClose();
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -15,13 +43,14 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <div className="container">
-          <div className="row align-items-center flex g-5 py-5">
+          <div className="row align-items-center d-flex g-5 py-5">
             <div className="col-md-6">
               <img
                 src="/img/rowlet.jpg"
                 width="250px"
                 height="250px"
                 className="d-block mx-auto rounded-circle"
+                onClick={handleClickImage}
               />
             </div>
             <div className="col-md-3 text-center text-md-start">
@@ -46,6 +75,17 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Body>
+            <input
+              type="password"
+              className="form-control"
+              value={password}
+              onChange={handleChange}
+              onKeyDown={handleKeyDown}
+            />
+          </Modal.Body>
+        </Modal>
       </main>
     </div>
   );
