@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Modal from "react-bootstrap/Modal";
 import styles from "../styles/Home.module.css";
 import { FaTwitter, FaGithub, FaDiscord } from "react-icons/fa";
+import React, { ChangeEvent, useState } from "react";
 
 const Home: NextPage = () => {
   const [count, setCount] = useState<number>(0);
