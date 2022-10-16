@@ -5,6 +5,7 @@ import Modal from "react-bootstrap/Modal";
 import styles from "../styles/Home.module.css";
 import { FaTwitter, FaGithub, FaDiscord } from "react-icons/fa";
 import React, { ChangeEvent, useState } from "react";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   const [count, setCount] = useState<number>(0);
@@ -61,7 +62,11 @@ const Home: NextPage = () => {
               <ul className="d-inline-block text-start ps-md-4 list-unstyled">
                 <li className="text-decoration-underline">Programming</li>
                 <li className="text-decoration-underline">Pokemon</li>
-                <li className="text-decoration-underline">Shadowbox</li>
+                <li>
+                  <Link href="/shadowbox">
+                    <a className="link-dark">Shadowbox</a>
+                  </Link>
+                </li>
               </ul>
               <div className="row justify-content-center">
                 <div className="d-flex col-8 justify-content-evenly">
