@@ -48,6 +48,7 @@ const Home: NextPage = () => {
             <div className="col-md-6">
               <img
                 src="/img/rowlet.jpg"
+                alt="rowlet"
                 width="250px"
                 height="250px"
                 className="d-block mx-auto rounded-circle"
@@ -64,13 +65,13 @@ const Home: NextPage = () => {
               </ul>
               <div className="row justify-content-center">
                 <div className="d-flex col-8 justify-content-evenly">
-                <a href="https://twitter.com/kerusu_1984">
-                  <FaTwitter size={30} color={"#00acee"} />
-                </a>
-                <a href="https://github.com/Kerusu-1984">
-                  <FaGithub size={30} color={"#000"} />
-                </a>
-                <FaDiscord size={30} color={"#7289da"} />
+                  <a href="https://twitter.com/kerusu_1984">
+                    <FaTwitter size={30} color={"#00acee"} />
+                  </a>
+                  <a href="https://github.com/Kerusu-1984">
+                    <FaGithub size={30} color={"#000"} />
+                  </a>
+                  <FaDiscord size={30} color={"#7289da"} />
                 </div>
               </div>
             </div>
