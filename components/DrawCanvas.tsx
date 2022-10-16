@@ -9,7 +9,7 @@ export const DrawCanvas = () => {
       <Fiber.Canvas camera={{ position: [50, 10, 0], fov: 15 }}>
         <Drei.OrbitControls />
         <ambientLight />
-        <Model src="shadowbox/rowlet/rowlet.gltf" />
+        <Model src="/shadowbox/rowlet/rowlet.gltf" />
       </Fiber.Canvas>
     </div>
   );

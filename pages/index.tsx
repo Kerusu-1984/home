@@ -63,7 +63,7 @@ const Home: NextPage = () => {
                 <li className="text-decoration-underline">Programming</li>
                 <li className="text-decoration-underline">Pokemon</li>
                 <li>
-                  <Link href="/shadowbox">
+                  <Link href="/shadow-box">
                     <a className="link-dark">Shadowbox</a>
                   </Link>
                 </li>
