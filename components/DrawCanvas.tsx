@@ -9,7 +9,7 @@ export const DrawCanvas = () => {
       <Fiber.Canvas>
         <Drei.OrbitControls />
         <ambientLight />
-        <Model />
+        <Model src="shadowbox/rowlet/rowlet.gltf" />
       </Fiber.Canvas>
     </div>
   );

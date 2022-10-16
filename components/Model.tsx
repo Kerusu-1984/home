@@ -1,20 +1,8 @@
+import { useLoader } from "@react-three/fiber";
 import React, { useRef } from "react";
-import { useGLTF } from "@react-three/drei";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
-export function Model(props) {
-  const { nodes, materials } = useGLTF("/shadowbox/rowlet/rowlet.gltf");
-  return (
-    <group {...props} dispose={null}>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.rowlet1.geometry}
-        material={materials.rowlet1}
-        position={[1.18, -9.81, -0.27]}
-        rotation={[-3.13, 0.07, 3.05]}
-      />
-    </group>
-  );
+export function Model(prop: { src: string }) {
+  const gltf = useLoader(GLTFLoader, prop.src);
+  return <primitive object={gltf.scene} scale={0.4} />;
 }
-
-useGLTF.preload("/shadowbox/rowlet/rowlet.gltf");
