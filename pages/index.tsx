@@ -56,7 +56,7 @@ const Home: NextPage = () => {
                 onClick={handleClickImage}
               />
             </div>
-            <div className="col-md-3 text-center text-md-start">
+            <div className="col-md-6 text-center text-md-start">
               <h1>kerusu</h1>
               <p>筑波大で情報を科学しています</p>
               <ul className="d-inline-block text-start ps-md-4 list-unstyled">
@@ -68,8 +68,8 @@ const Home: NextPage = () => {
                   </Link>
                 </li>
               </ul>
-              <div className="row justify-content-center">
-                <div className="d-flex col-8 justify-content-evenly">
+              <div className="row">
+                <div className="d-flex col-md-8 justify-content-evenly">
                   <a href="https://twitter.com/kerusu_1984">
                     <FaTwitter size={30} color={"#00acee"} />
                   </a>
