@@ -6,9 +6,9 @@ import * as React from "react";
 
 const Shadowbox = () => {
   return (
-    <div className="container">
-      <main>
-        <div style={{ width: "90vw", height: "90vh" }}>
+    <main className="min-vh-100  justify-content-center  d-flex">
+      <div className="container">
+        <div style={{ width: "100%", height: "90%" }}>
           <Fiber.Canvas camera={{ position: [50, 10, 0], fov: 15 }}>
             <Drei.OrbitControls />
             <ambientLight />
@@ -20,8 +20,8 @@ const Shadowbox = () => {
           ドラッグで回転 マウスホイールで拡大縮小
           右クリックしながらドラッグで移動
         </div>
-      </main>
-    </div>
+      </div>
+    </main>
   );
 };
 
