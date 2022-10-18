@@ -6,6 +6,7 @@ import styles from "../styles/Home.module.css";
 import { FaTwitter, FaGithub, FaDiscord } from "react-icons/fa";
 import React, { ChangeEvent, useState } from "react";
 import Link from "next/link";
+import ReactTooltip from "react-tooltip";
 
 const Home: NextPage = () => {
   const [count, setCount] = useState<number>(0);
@@ -76,7 +77,12 @@ const Home: NextPage = () => {
                   <a href="https://github.com/Kerusu-1984">
                     <FaGithub size={30} color={"#000"} />
                   </a>
-                  <FaDiscord size={30} color={"#7289da"} />
+                  <div>
+                    <ReactTooltip effect="solid" place="top" />
+                    <div data-tip="kerusu #3301">
+                      <FaDiscord size={30} color={"#7289da"} />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
