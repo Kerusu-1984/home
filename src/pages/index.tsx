@@ -53,7 +53,11 @@ const Home: NextPage = () => {
             <p>筑波大で情報を科学しています</p>
             <ul className="d-inline-block text-start ps-md-4 list-unstyled">
               <li className="text-decoration-underline">Programming</li>
-              <li className="text-decoration-underline">Pokemon</li>
+              <li>
+                <Link href="/blog">
+                  <a className="link-dark">Blog</a>
+                </Link>
+              </li>
               <li>
                 <Link href="/shadow-box">
                   <a className="link-dark">Shadowbox</a>
