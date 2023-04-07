@@ -23,7 +23,7 @@ export const getStaticPaths = () => {
   };
 };
 
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps = async ({ params }: any) => {
   const slug = params?.slug;
 
   return {
