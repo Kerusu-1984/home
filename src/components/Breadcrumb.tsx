@@ -16,21 +16,19 @@ interface DetailProps {
 
 const BreadcrumbItem = ({ item }: DetailProps) => {
   return item.link ? (
-    <Breadcrumb.Item key={item.title} linkAs={Link} href={item.link}>
+    <Breadcrumb.Item linkAs={Link} href={item.link}>
       {item.title}
     </Breadcrumb.Item>
   ) : (
-    <Breadcrumb.Item key={item.title} active>
-      {item.title}
-    </Breadcrumb.Item>
+    <Breadcrumb.Item active>{item.title}</Breadcrumb.Item>
   );
 };
 
 export const Breadcrumbs = ({ breadcrumbList }: Props) => {
   return (
     <Breadcrumb>
-      {breadcrumbList.map((item) => (
-        <BreadcrumbItem item={item} />
+      {breadcrumbList.map((item, index) => (
+        <BreadcrumbItem item={item} key={index} />
       ))}
     </Breadcrumb>
   );
