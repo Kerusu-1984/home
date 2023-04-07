@@ -9,9 +9,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>kerusu HomePage</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="twitter:card" content="summary" />
-        <meta property="twitter:domain" content="kerusu.xyz" />
+        <meta property="twitter:site" content="@kerusu_1984" />
         <meta property="og:image" content="https://kerusu.xyz/img/rowlet.jpg" />
         <meta property="og:title" content="kerusu HomePage" />
+        <meta property="og:description" content="kerusuのすべてがわかる(?)" />
+        <meta property="og:url" content="https://kerusu.xyz/" />
       </Head>
       <Component {...pageProps} />
     </>
