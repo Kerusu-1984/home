@@ -5,7 +5,6 @@ import remarkRehype from "remark-rehype";
 import rehypeRaw from "rehype-raw";
 import rehypeStringify from "rehype-stringify";
 import rehypeReact from "rehype-react";
-import CustomImage from "../components/CustomImage";
 import { Fragment,createElement } from "react";
 import CustomLink from "../components/CustomLink";
 
@@ -19,7 +18,6 @@ export const markdownToReactElement = (markdownContent: string) => {
     .use(rehypeReact, {
       Fragment,
       components: {
-        img: CustomImage,
         a:CustomLink
       },
       createElement,
