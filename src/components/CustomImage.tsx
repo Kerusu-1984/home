@@ -12,16 +12,11 @@ const ImageModal = ({
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  // 画面幅が768px以上ならtrueを返す
-  const isDesktop = () => {
-    return window.innerWidth >= 768;
-  };
-
   return (
     <>
       <img src={src} alt={alt} onClick={handleShow} className={className} />
 
-      <Modal show={show} onHide={handleClose} centered={!isDesktop()}>
+      <Modal show={show} onHide={handleClose} centered>
         <Modal.Body style={{ display: "flex", justifyContent: "center" }}>
           <img src={src} alt={alt} style={{ maxWidth: "100%" }} />
         </Modal.Body>
