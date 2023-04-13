@@ -12,9 +12,21 @@ const ImageModal = ({
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const handleMouseEnter = (
+    e: React.SyntheticEvent<HTMLImageElement, MouseEvent>
+  ) => {
+    e.currentTarget.style.cursor = "pointer";
+  };
+
   return (
     <>
-      <img src={src} alt={alt} onClick={handleShow} className={className} />
+      <img
+        src={src}
+        alt={alt}
+        onClick={handleShow}
+        className={className}
+        onMouseEnter={handleMouseEnter}
+      />
 
       <Modal show={show} onHide={handleClose} centered>
         <Modal.Body style={{ display: "flex", justifyContent: "center" }}>
