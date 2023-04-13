@@ -17,7 +17,7 @@ const ImageModal = ({
       <img src={src} alt={alt} onClick={handleShow} className={className} />
 
       <Modal show={show} onHide={handleClose}>
-        <Modal.Body>
+        <Modal.Body style={{ display: "flex", justifyContent: "center" }}>
           <img src={src} alt={alt} style={{ maxWidth: "100%" }} />
         </Modal.Body>
       </Modal>
