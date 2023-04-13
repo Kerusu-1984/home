@@ -4,10 +4,19 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { getMarkdown } from "../../libs/get-markdown";
 import { markdownToReactElement } from "../../libs/markdown-to-react-element";
 import { Breadcrumbs } from "../../components/Breadcrumb";
+import { NextSeo } from "next-seo";
 
 type BlogDetailPageProps = {
   markdownContent: string;
+  article: Article;
+};
+
+type Article = {
   slug: string;
+  title: string;
+  date: string;
+  description: string;
+  image: string;
 };
 
 export const getStaticPaths = () => {
@@ -25,35 +34,66 @@ export const getStaticPaths = () => {
 
 export const getStaticProps = async ({ params }: any) => {
   const slug = params?.slug;
+  const article = getMarkdown(`articles/${slug}.md`);
 
   return {
     props: {
       markdownContent: getMarkdown(`articles/${slug}.md`).content,
-      slug,
+      article: {
+        slug,
+        title: article.data.title,
+        date: article.data.date,
+        description: article.data.description,
+        image: article.data.image,
+      },
     },
   };
 };
 
 const BlogDetailPage: NextPage<BlogDetailPageProps> = ({
   markdownContent,
-  slug,
+  article,
 }) => {
   return (
-    <div className="container">
-      <>
-        {markdownToReactElement(markdownContent)}
-        <hr />
-        <div className="m-2">
-          <Breadcrumbs
-            breadcrumbList={[
-              { title: "Home", link: "/" },
-              { title: "Blog", link: "/blog/" },
-              { title: slug },
-            ]}
-          />
-        </div>
-      </>
-    </div>
+    <>
+      <NextSeo
+        title={article.title}
+        description={article.description}
+        openGraph={{
+          type: "website",
+          title: article.title,
+          description: article.description,
+          url: `https://kerusu.xyz/blog/${article.slug}`,
+          images: [
+            {
+              url: `https://kerusu.xyz/blog/${article.slug}/${article.image}`,
+              alt: "サムネイル",
+            },
+          ],
+        }}
+        twitter={{
+          handle: "@kerusu_1984",
+          site: "@kerusu_1984",
+          cardType: "summary_large_image",
+        }}
+      />
+
+      <div className="container">
+        <>
+          {markdownToReactElement(markdownContent)}
+          <hr />
+          <div className="m-2">
+            <Breadcrumbs
+              breadcrumbList={[
+                { title: "Home", link: "/" },
+                { title: "Blog", link: "/blog/" },
+                { title: article.title },
+              ]}
+            />
+          </div>
+        </>
+      </div>
+    </>
   );
 };
 
