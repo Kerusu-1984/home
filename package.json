@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export"
+    "export": "next export",
+    "new-blog": "today=date +'%Y-%m-%d' && touch ./articles/$today.md && mkdir ./public/blog/$today"
   },
   "dependencies": {
     "@react-three/drei": "^9.34.4",
