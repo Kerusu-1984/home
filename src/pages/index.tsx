@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         <div className="profile my-auto md:text-left text-center">
           <p className="text-5xl font-semibold my-3">kerusu</p>
           <p>筑波大で情報を科学しています</p>
-          <div className="links my-3 text-2xl md:ml-4 underline-offset-1 text-left md:mx-0 mx-auto w-fit">
+          <div className="links my-3 text-2xl md:ml-4 text-left md:mx-0 mx-auto w-fit underline">
             <ul>
               <li>
                 <Link href="/programming">
