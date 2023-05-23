@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { DefaultSeo } from "next-seo";
@@ -8,13 +9,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        {/* <title>kerusu HomePage</title>
-        <meta name="twitter:card" content="summary" />
-        <meta property="twitter:site" content="@kerusu_1984" />
-        <meta property="og:image" content="https://kerusu.xyz/img/rowlet.jpg" />
-        <meta property="og:title" content="kerusu HomePage" />
-        <meta property="og:description" content="kerusuのすべてがわかる(?)" />
-        <meta property="og:url" content="https://kerusu.xyz/" /> */}
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+        />
       </Head>
       <DefaultSeo
         defaultTitle="kerusu HomePage"

@@ -1,5 +1,4 @@
 import { Model } from "../../components/Model";
-import "bootstrap/dist/css/bootstrap.min.css";
 import * as Fiber from "@react-three/fiber";
 import * as Drei from "@react-three/drei";
 import * as React from "react";
