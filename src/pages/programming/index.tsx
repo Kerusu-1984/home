@@ -1,4 +1,5 @@
 import Pokecaptcha from "../../components/programming/Pokecaptcha";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Programming() {
   return (

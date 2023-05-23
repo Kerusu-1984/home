@@ -3,6 +3,7 @@ import * as Fiber from "@react-three/fiber";
 import * as Drei from "@react-three/drei";
 import * as React from "react";
 import { Breadcrumbs } from "../../components/Breadcrumb";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Shadowbox = () => {
   return (

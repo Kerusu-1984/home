@@ -1,103 +1,50 @@
 import type { NextPage } from "next";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Modal from "react-bootstrap/Modal";
 import { FaTwitter, FaGithub, FaDiscord } from "react-icons/fa";
 import React, { ChangeEvent, useState } from "react";
 import Link from "next/link";
-import ReactTooltip from "react-tooltip";
 
 const Home: NextPage = () => {
-  const [count, setCount] = useState<number>(0);
-  const [show, setShow] = useState<boolean>(false);
-  const [password, setPassword] = useState("");
-
-  const handleClickImage = () => {
-    if (count === 10) {
-      setShow(true);
-      setCount(0);
-    }
-    setCount((prev) => {
-      return prev + 1;
-    });
-  };
-
-  const handleClose = () => setShow(false);
-
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setPassword(e.target.value);
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    // Enterキーでデータを送信できるようにする
-    if (e.nativeEvent.isComposing || e.key !== "Enter") return;
-    // TODO:API呼び出し
-    handleClose();
-  };
-
   return (
-    <main className="min-vh-100 justify-content-center align-items-center d-flex">
-      <div className="container">
-        <div className="row align-items-center d-flex g-5 py-5">
-          <div className="col-md-6">
-            <img
-              src="/img/rowlet.jpg"
-              alt="rowlet"
-              width="250px"
-              height="250px"
-              className="d-block mx-auto rounded-circle"
-              onClick={handleClickImage}
-            />
-          </div>
-          <div className="col-md-6 text-center text-md-start">
-            <h1>kerusu</h1>
-            <p>筑波大で情報を科学しています</p>
-            <ul className="d-inline-block text-start ps-md-4 list-unstyled">
-              <li>
-                <Link href="/programming">
-                  <a className="link-dark">Programming</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog">
-                  <a className="link-dark">Blog</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/shadow-box">
-                  <a className="link-dark">Shadowbox</a>
-                </Link>
-              </li>
-            </ul>
-            <div className="row">
-              <div className="d-flex col-md-8 justify-content-evenly">
-                <a href="https://twitter.com/kerusu_1984">
-                  <FaTwitter size={30} color={"#00acee"} />
-                </a>
-                <a href="https://github.com/Kerusu-1984">
-                  <FaGithub size={30} color={"#000"} />
-                </a>
-                <div>
-                  <ReactTooltip effect="solid" place="top" />
-                  <div data-tip="kerusu #3301">
-                    <FaDiscord size={30} color={"#7289da"} />
-                  </div>
-                </div>
-              </div>
-            </div>
+    <main className="md:flex h-screen w-screen md:py-12 px-12 py-24">
+      <div className="avatar md:my-auto min-w-64 md:w-1/2 w-full">
+        <div className="max-w-64 max-h-64 mx-auto rounded-full">
+          <img src="/img/rowlet.jpg" alt="rowlet" />
+        </div>
+      </div>
+      <div className="profile my-auto md:text-left text-center">
+        <p className="text-5xl font-semibold my-3">kerusu</p>
+        <p>筑波大で情報を科学しています</p>
+        <div className="links my-3 text-2xl md:ml-4 underline-offset-1 text-left md:mx-0 mx-auto w-fit">
+          <ul>
+            <li>
+              <Link href="/programming">
+                <a>Programming</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog">
+                <a>Blog</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/shadow-box">
+                <a>Shadowbox</a>
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="social-links flex justify-between md:w-full w-2/3 mx-auto mt-8">
+          <a href="https://twitter.com/kerusu_1984">
+            <FaTwitter size={30} color={"#00acee"} />
+          </a>
+          <a href="https://github.com/Kerusu-1984">
+            <FaGithub size={30} color={"#000"} />
+          </a>
+          <div className="tooltip" data-tip="kerusu #3301">
+            <FaDiscord size={30} color={"#7289da"} />
           </div>
         </div>
       </div>
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Body>
-          <input
-            type="password"
-            className="form-control"
-            value={password}
-            onChange={handleChange}
-            onKeyDown={handleKeyDown}
-          />
-        </Modal.Body>
-      </Modal>
     </main>
   );
 };
