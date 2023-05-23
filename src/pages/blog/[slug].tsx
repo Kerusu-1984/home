@@ -76,11 +76,12 @@ const BlogDetailPage: NextPage<BlogDetailPageProps> = ({
           cardType: "summary_large_image",
         }}
       />
-
-      <main className="py-12 px-12 w-screen">
-        <div className="prose md:w-2/3 mx-auto prose-img:my-3 prose-img:w-3/4">
-          {markdownToReactElement(markdownContent)}
-        </div>
+      <div className="w-screen p-12">
+        <main>
+          <div className="prose md:w-2/3 mx-auto prose-img:my-3 prose-img:w-3/4">
+            {markdownToReactElement(markdownContent)}
+          </div>
+        </main>
         <hr />
         <footer>
           <Breadcrumb
@@ -91,7 +92,7 @@ const BlogDetailPage: NextPage<BlogDetailPageProps> = ({
             ]}
           />
         </footer>
-      </main>
+      </div>
     </>
   );
 };

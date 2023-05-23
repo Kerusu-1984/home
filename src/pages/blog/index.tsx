@@ -28,24 +28,26 @@ export const getStaticProps = () => {
 
 export default function Blog({ articles }: { articles: Article[] }) {
   return (
-    <main className="h-screen w-screen md:py-12 px-12 py-24">
-      <h1 className="text-4xl">Blog</h1>
-      <ul className="m-4">
-        {articles.map((article) => (
-          <li key={article.slug} className="my-2">
-            <a href={`/blog/${article.slug}`}>
-              {" "}
-              {article.date} <br /> {article.title}
-            </a>
-          </li>
-        ))}
-      </ul>
+    <div className="h-screen w-screen md:py-12 px-12 py-24">
+      <main>
+        <h1 className="text-4xl">Blog</h1>
+        <ul className="m-4">
+          {articles.map((article) => (
+            <li key={article.slug} className="my-2">
+              <a href={`/blog/${article.slug}`}>
+                {" "}
+                {article.date} <br /> {article.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </main>
       <hr />
       <footer>
         <Breadcrumb
           breadcrumb={[{ title: "Home", link: "/" }, { title: "Blog" }]}
         />
       </footer>
-    </main>
+    </div>
   );
 }

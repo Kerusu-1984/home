@@ -7,25 +7,28 @@ import Link from "next/link";
 
 const Shadowbox = () => {
   return (
-    <main className="h-screen w-screen md:py-12 px-12 py-24">
-      <div className="shadowbox-3d h-4/5 relative">
-        <Fiber.Canvas camera={{ position: [50, 10, 0], fov: 15 }}>
-          <Drei.OrbitControls />
-          <ambientLight />
-          <Model src="/shadowbox/rowlet/rowlet.gltf" />
-        </Fiber.Canvas>
-        <div className="explanation text-center text-gray-400 absolute bottom-0 w-full md:block hidden">
-          ドラッグで回転 マウスホイールで拡大縮小
-          右クリックしながらドラッグで移動
+    <div className="h-screen w-screen md:py-12 px-12 py-24">
+      <main>
+        <div className="shadowbox-3d h-4/5 relative">
+          <Fiber.Canvas camera={{ position: [50, 10, 0], fov: 15 }}>
+            <Drei.OrbitControls />
+            <ambientLight />
+            <Model src="/shadowbox/rowlet/rowlet.gltf" />
+          </Fiber.Canvas>
+          <div className="explanation text-center text-gray-400 absolute bottom-0 w-full md:block hidden">
+            ドラッグで回転 マウスホイールで拡大縮小
+            右クリックしながらドラッグで移動
+          </div>
         </div>
-      </div>
+      </main>
+
       <hr />
       <footer>
         <Breadcrumb
           breadcrumb={[{ title: "Home", link: "/" }, { title: "ShadowBox" }]}
         />
       </footer>
-    </main>
+    </div>
   );
 };
 
