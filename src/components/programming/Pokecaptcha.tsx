@@ -1,4 +1,3 @@
-import { Modal } from "react-bootstrap";
 import { useState } from "react";
 
 const CaptchaImage = (prop: { img_src: string; className?: string }) => {
@@ -20,18 +19,20 @@ const Pokecaptcha = () => {
   return (
     <>
       <div
-        style={{ width: "310px", height: "80px", backgroundColor: "#f5f5f5" }}
-        className="border shadow-sm"
+        style={{ width: "300px", height: "75px", backgroundColor: "#f5f5f5" }}
+        className="border shadow-sm px-3 pt-3"
       >
-        <div className="d-flex align-items-center mt-3">
+        <div className="flex items-center justify-between">
           <input
             type="checkbox"
             style={{ transform: "scale(2.5)" }}
-            className="mx-3"
+            className="w-10"
             onClick={() => setShow(true)}
           />
           <p className="my-0 mx-2 lh-sm" style={{ fontSize: "14px" }}>
-            私はロボットではありません
+            私はロボットではあり
+            <br />
+            ません
           </p>
           <div className="text-center ">
             <span className="material-symbols-outlined">cycle</span>
@@ -45,7 +46,7 @@ const Pokecaptcha = () => {
           プライバシー - 利用規約
         </div>
       </div>
-      <Modal show={show} onHide={handleClose} centered>
+      {/* <Modal show={show} onHide={handleClose} centered>
         <Modal.Header className="p-2 text-white">
           <div className="bg-primary w-100 d-flex  p-2">
             <Modal.Title className="mx-3 my-1 lh-sm">
@@ -77,7 +78,7 @@ const Pokecaptcha = () => {
         <Modal.Footer>
           <button className="btn btn-primary">確認</button>
         </Modal.Footer>
-      </Modal>
+      </Modal> */}
     </>
   );
 };
