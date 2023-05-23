@@ -1,7 +1,6 @@
 import { getAllSlug } from "../../libs/get-all-slug";
 import { getMarkdown } from "../../libs/get-markdown";
-import { Breadcrumbs } from "../../components/Breadcrumb";
-import "bootstrap/dist/css/bootstrap.min.css";
+import Breadcrumb from "../../components/Breadcrumb";
 
 type Article = {
   slug: string;
@@ -29,11 +28,11 @@ export const getStaticProps = () => {
 
 export default function Blog({ articles }: { articles: Article[] }) {
   return (
-    <div className="container">
-      <h1>Blog</h1>
+    <main className="h-screen w-screen md:py-12 px-12 py-24">
+      <h1 className="text-4xl">Blog</h1>
       <ul className="m-4">
         {articles.map((article) => (
-          <li key={article.slug}>
+          <li key={article.slug} className="my-2">
             <a href={`/blog/${article.slug}`}>
               {" "}
               {article.date} <br /> {article.title}
@@ -42,11 +41,11 @@ export default function Blog({ articles }: { articles: Article[] }) {
         ))}
       </ul>
       <hr />
-      <div className="m-2">
-        <Breadcrumbs
-          breadcrumbList={[{ title: "Home", link: "/" }, { title: "Blog" }]}
+      <footer>
+        <Breadcrumb
+          breadcrumb={[{ title: "Home", link: "/" }, { title: "Blog" }]}
         />
-      </div>
-    </div>
+      </footer>
+    </main>
   );
 }

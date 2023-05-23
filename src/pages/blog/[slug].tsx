@@ -1,9 +1,8 @@
 import { NextPage } from "next";
 import { getAllSlug } from "../../libs/get-all-slug";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { getMarkdown } from "../../libs/get-markdown";
 import { markdownToReactElement } from "../../libs/markdown-to-react-element";
-import { Breadcrumbs } from "../../components/Breadcrumb";
+import Breadcrumb from "../../components/Breadcrumb";
 import { NextSeo } from "next-seo";
 
 type BlogDetailPageProps = {
@@ -78,21 +77,21 @@ const BlogDetailPage: NextPage<BlogDetailPageProps> = ({
         }}
       />
 
-      <div className="container">
-        <>
+      <main className="py-12 px-12 w-screen">
+        <div className="prose md:w-2/3 mx-auto prose-img:my-3 prose-img:w-3/4">
           {markdownToReactElement(markdownContent)}
-          <hr />
-          <div className="m-2">
-            <Breadcrumbs
-              breadcrumbList={[
-                { title: "Home", link: "/" },
-                { title: "Blog", link: "/blog/" },
-                { title: article.title },
-              ]}
-            />
-          </div>
-        </>
-      </div>
+        </div>
+        <hr />
+        <footer>
+          <Breadcrumb
+            breadcrumb={[
+              { title: "Home", link: "/" },
+              { title: "Blog", link: "/blog/" },
+              { title: article.title },
+            ]}
+          />
+        </footer>
+      </main>
     </>
   );
 };

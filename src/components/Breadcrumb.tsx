@@ -1,4 +1,3 @@
-import { Breadcrumb } from "react-bootstrap";
 import Link from "next/link";
 
 type BreadcrumbItem = {
@@ -6,30 +5,25 @@ type BreadcrumbItem = {
   link?: string;
 };
 
-interface Props {
-  breadcrumbList: BreadcrumbItem[];
-}
-
-interface DetailProps {
-  item: BreadcrumbItem;
-}
-
-const BreadcrumbItem = ({ item }: DetailProps) => {
-  return item.link ? (
-    <Breadcrumb.Item linkAs={Link} href={item.link}>
-      {item.title}
-    </Breadcrumb.Item>
-  ) : (
-    <Breadcrumb.Item active>{item.title}</Breadcrumb.Item>
-  );
-};
-
-export const Breadcrumbs = ({ breadcrumbList }: Props) => {
+const Breadcrumb = (prop: { breadcrumb: BreadcrumbItem[] }) => {
+  const breadcrumbList = prop.breadcrumb;
   return (
-    <Breadcrumb>
-      {breadcrumbList.map((item, index) => (
-        <BreadcrumbItem item={item} key={index} />
-      ))}
-    </Breadcrumb>
+    <div className="breadcrumbs">
+      <ul>
+        {breadcrumbList.map((item, index) => (
+          <li key={index}>
+            {item.link ? (
+              <Link href={item.link}>
+                <a>{item.title}</a>
+              </Link>
+            ) : (
+              item.title
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
+
+export default Breadcrumb;
