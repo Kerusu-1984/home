@@ -1,6 +1,6 @@
-import Pokecaptcha from "../../components/programming/Pokecaptcha";
-import Breadcrumb from "../../components/Breadcrumb";
-import MusicPlayButton from "../../components/programming/MusicPlayButton";
+import Pokecaptcha from "components/programming/Pokecaptcha";
+import Breadcrumb from "components/Breadcrumb";
+import MusicPlayButton from "components/programming/MusicPlayButton";
 
 export default function Programming() {
   return (

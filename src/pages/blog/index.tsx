@@ -1,6 +1,6 @@
-import { getAllSlug } from "../../libs/get-all-slug";
-import { getMarkdown } from "../../libs/get-markdown";
-import Breadcrumb from "../../components/Breadcrumb";
+import { getAllSlug } from "libs/get-all-slug";
+import { getMarkdown } from "libs/get-markdown";
+import Breadcrumb from "components/Breadcrumb";
 
 type Article = {
   slug: string;

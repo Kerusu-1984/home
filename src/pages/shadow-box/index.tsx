@@ -1,8 +1,8 @@
-import { Model } from "../../components/Model";
+import { Model } from "components/Model";
 import * as Fiber from "@react-three/fiber";
 import * as Drei from "@react-three/drei";
 import * as React from "react";
-import Breadcrumb from "../../components/Breadcrumb";
+import Breadcrumb from "components/Breadcrumb";
 import Link from "next/link";
 
 const Shadowbox = () => {

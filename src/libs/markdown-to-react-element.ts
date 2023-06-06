@@ -7,7 +7,7 @@ import rehypeStringify from "rehype-stringify";
 import rehypeReact from "rehype-react";
 import remarkGfm from "remark-gfm";
 import { Fragment,createElement } from "react";
-import CustomLink from "../components/CustomLink";
+import CustomLink from "components/CustomLink";
 
 export const markdownToReactElement = (markdownContent: string) => {
   return remark()
