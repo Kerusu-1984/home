@@ -180,12 +180,6 @@ const Pokecaptcha = () => {
           className="border shadow-sm px-3 pt-3"
         >
           <div className="flex items-center justify-between">
-            {/* <input
-              type="checkbox"
-              style={{ transform: "scale(2.5)" }}
-              className="w-10"
-              disabled
-            /> */}
             <div className="w-7 h-7 bg-white border-2 border-gray-300 rounded-sm"></div>
             <p className="my-0 mx-2 lh-sm" style={{ fontSize: "14px" }}>
               私はロボットではあり

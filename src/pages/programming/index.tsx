@@ -1,5 +1,6 @@
 import Pokecaptcha from "../../components/programming/Pokecaptcha";
 import Breadcrumb from "../../components/Breadcrumb";
+import MusicPlayButton from "../../components/programming/MusicPlayButton";
 
 export default function Programming() {
   return (
@@ -8,6 +9,9 @@ export default function Programming() {
         <h1 className="text-4xl mb-8 py-2">Programming</h1>
         <div className="m-2">
           <Pokecaptcha />
+          <div className="my-4">
+            <MusicPlayButton />
+          </div>
         </div>
       </main>
       <hr />
