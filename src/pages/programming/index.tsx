@@ -1,6 +1,5 @@
 import Pokecaptcha from "components/programming/Pokecaptcha";
 import Breadcrumb from "components/Breadcrumb";
-import MusicPlayButton from "components/programming/MusicPlayButton";
 
 export default function Programming() {
   return (
@@ -10,7 +9,7 @@ export default function Programming() {
         <div className="m-2">
           <Pokecaptcha />
           <div className="my-4">
-            <MusicPlayButton />
+            <audio controls src="/audio_play_test_music.mp3"></audio>
           </div>
         </div>
       </main>
