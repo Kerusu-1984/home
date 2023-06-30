@@ -65,7 +65,7 @@ const BlogDetailPage: NextPage<BlogDetailPageProps> = ({
           url: `https://kerusu.xyz/blog/${article.slug}`,
           images: [
             {
-              url: `https://kerusu.xyz/blog/${article.slug}/${article.image}`,
+              url: article.image ? `https://kerusu.xyz${article.image}` : "",
               alt: "サムネイル",
             },
           ],
