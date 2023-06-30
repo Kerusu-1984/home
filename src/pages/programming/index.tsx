@@ -8,9 +8,6 @@ export default function Programming() {
         <h1 className="text-4xl mb-8 py-2">Programming</h1>
         <div className="m-2">
           <Pokecaptcha />
-          <div className="my-4">
-            <audio controls src="/audio_play_test_music.mp3"></audio>
-          </div>
         </div>
       </main>
       <hr />
