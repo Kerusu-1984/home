@@ -43,7 +43,7 @@ export const getStaticProps = async ({ params }: any) => {
         title: article.data.title,
         date: article.data.date,
         description: article.data.description,
-        image: article.data.image,
+        image: article.data.image ? article.data.image : "",
       },
     },
   };
@@ -65,7 +65,9 @@ const BlogDetailPage: NextPage<BlogDetailPageProps> = ({
           url: `https://kerusu.xyz/blog/${article.slug}`,
           images: [
             {
-              url: article.image ? `https://kerusu.xyz${article.image}` : "",
+              url: article.image
+                ? `https://kerusu.xyz/blog/${article.slug}/${article.image}`
+                : "",
               alt: "サムネイル",
             },
           ],
