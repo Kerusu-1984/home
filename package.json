@@ -14,7 +14,6 @@
     "@react-three/drei": "^9.34.4",
     "@react-three/fiber": "^8.8.10",
     "@types/three": "^0.144.0",
-    "bootstrap": "^5.2.1",
     "daisyui": "^2.51.6",
     "gray-matter": "^4.0.3",
     "next": "12.2.5",
