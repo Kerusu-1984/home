@@ -7,7 +7,20 @@ export default function Programming() {
       <main className="h-4/5">
         <h1 className="text-4xl mb-8 py-2">Programming</h1>
         <div className="m-2">
-          <Pokecaptcha />
+          <ul className="list-disc">
+            <li>
+              <a
+                href="https://kerusu-1984.github.io/pokemon-sleep-calc-required-candy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500"
+              >
+                Pokémon Sleep アメ・経験値シミュレータ
+              </a>
+            </li>
+            <li>PokeCAPTCHA</li>
+            <Pokecaptcha />
+          </ul>
         </div>
       </main>
       <hr />
