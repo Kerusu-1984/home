@@ -1,42 +1,44 @@
 import { getAllSlug } from "libs/get-all-slug";
 import { getMarkdown } from "libs/get-markdown";
 import Breadcrumb from "components/Breadcrumb";
+import { client } from "libs/client";
 
-type Article = {
-  slug: string;
+export type Blog = {
+  id: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  revisedAt: string;
   title: string;
-  date: string;
+  content: string;
+  eyecatch: {
+    url: string;
+    width: number;
+    height: number;
+  };
+  category: { name: string }[];
 };
 
-export const getStaticProps = () => {
-  const slugs = getAllSlug("articles");
-  const articles = slugs.map((slug) => {
-    const article = getMarkdown(`articles/${slug}.md`);
-    return {
-      slug,
-      title: article.data.title,
-      date: article.data.date,
-    };
-  });
-
+export const getStaticProps = async () => {
+  const data = await client.get({ endpoint: "blog" });
   return {
     props: {
-      articles: articles,
+      blog: data.contents,
     },
   };
 };
 
-export default function Blog({ articles }: { articles: Article[] }) {
+export default function Blog({ blog }: { blog: Blog[] }) {
   return (
     <div className="h-screen w-screen md:py-12 px-12 py-24">
       <main>
         <h1 className="text-4xl">Blog</h1>
         <ul className="m-4">
-          {articles.map((article) => (
-            <li key={article.slug} className="my-2">
-              <a href={`/blog/${article.slug}`}>
+          {blog.map((blog) => (
+            <li key={blog.id} className="my-2">
+              <a href={`/blog/${blog.id}`}>
                 {" "}
-                {article.date} <br /> {article.title}
+                {blog.createdAt} <br /> {blog.title}
               </a>
             </li>
           ))}
