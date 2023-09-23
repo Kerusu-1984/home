@@ -1,7 +1,3 @@
-import { NextPage } from "next";
-import { getAllSlug } from "libs/get-all-slug";
-import { getMarkdown } from "libs/get-markdown";
-import { markdownToReactElement } from "libs/markdown-to-react-element";
 import Breadcrumb from "components/Breadcrumb";
 import { NextSeo } from "next-seo";
 import { client } from "libs/client";

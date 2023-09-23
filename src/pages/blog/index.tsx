@@ -1,5 +1,3 @@
-import { getAllSlug } from "libs/get-all-slug";
-import { getMarkdown } from "libs/get-markdown";
 import Breadcrumb from "components/Breadcrumb";
 import { client } from "libs/client";
 
