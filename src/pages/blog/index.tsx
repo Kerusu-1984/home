@@ -36,7 +36,7 @@ export default function Blog({ blog }: { blog: Blog[] }) {
             <li key={blog.id} className="my-2">
               <a href={`/blog/${blog.id}`}>
                 {" "}
-                {blog.createdAt} <br /> {blog.title}
+                {blog.publishedAt.slice(0, 10)} <br /> {blog.title}
               </a>
             </li>
           ))}

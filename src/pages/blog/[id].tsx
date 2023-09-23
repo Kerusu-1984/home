@@ -46,7 +46,7 @@ const BlogDetailPage = ({ blog }: { blog: Blog }) => {
         <main>
           <div className="prose md:max-w-3xl mx-auto">
             <h1>{blog.title}</h1>
-            <p>{blog.publishedAt}</p>
+            <p>{blog.publishedAt.slice(0, 10)}</p>
             <div
               dangerouslySetInnerHTML={{
                 __html: `${blog.content}`,
