@@ -7,8 +7,8 @@ import Link from "next/link";
 
 const Shadowbox = () => {
   return (
-    <div className="h-screen w-screen md:py-12 px-12 py-24">
-      <main className="h-4/5">
+    <div className="h-screen w-screen">
+      <main className="h-5/6">
         <div className="shadowbox-3d h-full relative">
           <Fiber.Canvas camera={{ position: [50, 10, 0], fov: 15 }}>
             <Drei.OrbitControls />
@@ -23,7 +23,7 @@ const Shadowbox = () => {
       </main>
 
       <hr />
-      <footer>
+      <footer className="px-4">
         <Breadcrumb
           breadcrumb={[{ title: "Home", link: "/" }, { title: "ShadowBox" }]}
         />
