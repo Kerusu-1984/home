@@ -19,17 +19,17 @@ const Home: NextPage = () => {
             <ul>
               <li>
                 <Link href="/programming">
-                  <a>Programming</a>
+                  Programming
                 </Link>
               </li>
               <li>
                 <Link href="/blog">
-                  <a>Blog</a>
+                  Blog
                 </Link>
               </li>
               <li>
                 <Link href="/shadow-box">
-                  <a>Shadowbox</a>
+                  Shadowbox
                 </Link>
               </li>
             </ul>

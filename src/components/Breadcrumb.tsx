@@ -14,7 +14,7 @@ const Breadcrumb = (prop: { breadcrumb: BreadcrumbItem[] }) => {
           <li key={index}>
             {item.link ? (
               <Link href={item.link}>
-                <a>{item.title}</a>
+                {item.title}
               </Link>
             ) : (
               item.title
