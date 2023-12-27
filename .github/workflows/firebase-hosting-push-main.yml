@@ -20,6 +20,9 @@ jobs:
         with:
           node-version-file: .tool-versions
 
+      - name: enable corepack
+        run: "corepack enbale yarn"
+
       - name: build
         env:
           MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
