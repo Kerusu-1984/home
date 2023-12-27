@@ -18,11 +18,13 @@ export default function Programming() {
                 Pokémon Sleep アメ・経験値シミュレータ
               </a>
             </li>
-            <li>PokeCAPTCHA</li>
+            <div className="mt-8">
             <Pokecaptcha />
+            </div>
           </ul>
         </div>
       </main>
+      <a href="https://www.coins.tsukuba.ac.jp/~syspro/2023/2023-06-28/index.html#notes-chatgpt" className="text-xs md:text-sm text-gray-500 py-1 italic">プログラミングは、楽しい。楽しいことを、コンピュータにやらせるのか。</a>
       <hr />
       <footer>
         <Breadcrumb
