@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Programming() {
   return (
-    <div className="h-screen w-screen md:py-12 px-12 py-24">
+    <div className="h-screen md:py-12 px-12 py-24">
       <main className="md:max-w-3xl mx-auto">
         <h1 className="text-4xl mb-8 py-2">Programming</h1>
         <div className="grid justify-items-stretch gap-4 mx-auto md:max-w-lg">
