@@ -27,11 +27,11 @@ const Home: NextPage = () => {
                   Blog
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/shadow-box">
                   Shadowbox
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div className="social-links flex justify-between md:w-full w-2/3 mx-auto mt-8">

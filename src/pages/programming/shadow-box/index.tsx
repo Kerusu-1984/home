@@ -25,7 +25,11 @@ const Shadowbox = () => {
       <hr />
       <footer className="px-4">
         <Breadcrumb
-          breadcrumb={[{ title: "Home", link: "/" }, { title: "ShadowBox" }]}
+          breadcrumb={[
+            { title: "Home", link: "/" },
+            { title: "Programming", link: "/programming" },
+            { title: "ShadowBox" },
+          ]}
         />
       </footer>
     </div>
