@@ -33,8 +33,8 @@ export default function Blog({ blog }: { blog: Blog[] }) {
         <h1 className="text-4xl">Blog</h1>
         <div className="grid justify-items-stretch gap-4 my-6">
           {blog.map((blog) => (
-            <a className="card card-side" href={`/blog/${blog.id}`} key={blog.id}>
-              <figure className="max-w-[10rem]">
+            <a className="card sm:card-side hover:bg-base-200" href={`/blog/${blog.id}`} key={blog.id}>
+              <figure className="sm:max-w-[10rem] sm:pr-0 px-6">
                 <img className="rounded-btn border border-base-300" src={blog.eyecatch.url} alt={blog.title} />
               </figure>
               <div className="card-body">
