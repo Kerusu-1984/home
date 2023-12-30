@@ -14,7 +14,7 @@ export type Blog = {
     width: number;
     height: number;
   };
-  category: { name: string }[];
+  category: { name: string };
 };
 
 export const getStaticProps = async () => {
@@ -28,19 +28,23 @@ export const getStaticProps = async () => {
 
 export default function Blog({ blog }: { blog: Blog[] }) {
   return (
-    <div className="h-screen w-screen md:py-12 px-12 py-24">
-      <main>
+    <div className="h-screen md:py-12 px-12 py-24">
+      <main className="md:max-w-3xl mx-auto">
         <h1 className="text-4xl">Blog</h1>
-        <ul className="m-4">
+        <div className="grid justify-items-stretch gap-4 my-6">
           {blog.map((blog) => (
-            <li key={blog.id} className="my-2">
-              <a href={`/blog/${blog.id}`}>
-                {" "}
-                {blog.publishedAt.slice(0, 10)} <br /> {blog.title}
-              </a>
-            </li>
+            <a className="card card-side" href={`/blog/${blog.id}`} key={blog.id}>
+              <figure className="max-w-[10rem]">
+                <img className="rounded-btn border border-base-300" src={blog.eyecatch.url} alt={blog.title} />
+              </figure>
+              <div className="card-body">
+                <h5>{blog.title}</h5>
+                <span className="badge">{blog.category.name}</span>
+                <p>{blog.publishedAt.slice(0, 10)}</p>
+              </div>
+            </a>
           ))}
-        </ul>
+          </div>
       </main>
       <hr />
       <footer>
