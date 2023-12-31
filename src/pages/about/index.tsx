@@ -228,7 +228,7 @@ const Home: NextPage = () => {
           <div className="divider my-0"></div>
           <ul className="list-disc list-inside pb-4">
             <li>応用情報技術者</li>
-            <li>データベーススペシャリスト試験</li>
+            <li>データベーススペシャリスト</li>
             <li>普通自動車免許 (なおペーパードライバー)</li>
           </ul>
         </div>
