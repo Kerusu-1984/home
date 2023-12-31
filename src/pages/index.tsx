@@ -13,25 +13,19 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div className="profile my-auto md:text-left text-center">
-          <p className="text-5xl font-semibold my-3">kerusu</p>
+          <p className="text-5xl font-semibold my-3">Kerusu</p>
           <p>筑波大で情報を科学しています</p>
           <div className="links my-3 text-2xl md:ml-4 text-left md:mx-0 mx-auto w-fit underline">
             <ul>
               <li>
-                <Link href="/programming">
-                  Programming
-                </Link>
+                <Link href="/about">About</Link>
               </li>
               <li>
-                <Link href="/blog">
-                  Blog
-                </Link>
+                <Link href="/programming">Programming</Link>
               </li>
-              {/* <li>
-                <Link href="/shadow-box">
-                  Shadowbox
-                </Link>
-              </li> */}
+              <li>
+                <Link href="/blog">Blog</Link>
+              </li>
             </ul>
           </div>
           <div className="social-links flex justify-between md:w-full w-2/3 mx-auto mt-8">

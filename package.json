@@ -15,7 +15,7 @@
     "@react-three/drei": "^9.34.4",
     "@react-three/fiber": "^8.8.10",
     "@types/three": "^0.144.0",
-    "daisyui": "^2.51.6",
+    "daisyui": "^4.0.0",
     "gray-matter": "^4.0.3",
     "next": "^13.4.20-canary.13",
     "next-seo": "^6.0.0",
