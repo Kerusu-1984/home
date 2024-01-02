@@ -40,12 +40,31 @@ export default function Programming() {
               />
             </figure>
             <div className="card-body">
-              <h2 className="card-title font-bold">
-                シャドーボックス
-              </h2>
+              <h2 className="card-title font-bold">シャドーボックス</h2>
               <p>シャドーボックスの3DデータをThree.jsで表示</p>
             </div>
           </Link>
+
+          <a
+            href="https://pokeca-souba.kerusu.xyz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card shadow-xl"
+          >
+            <figure>
+              <img
+                className="rounded-btn border border-base-300"
+                src="/img/programming/pokeca_souba.png"
+                alt="ポケカ相場"
+              />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title font-bold">ポケカ相場(更新停止)</h2>
+              <p>
+                ポケカの相場を表示します。2023年11月に更新を停止しています。
+              </p>
+            </div>
+          </a>
         </div>
 
         <div className="mt-16">
