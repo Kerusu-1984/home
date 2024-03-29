@@ -58,6 +58,13 @@ const Home: NextPage = () => {
               その他ゲーム: <br />
               MHXX、Civ6、ファンタジーライフ、黒い砂漠、Shadowverseなど
             </li>
+            <li>
+              チェロ: <br />
+              高校生の時にやっていました。マイチェロがとても欲しいです。過去に弾いた曲の音源は
+              <Link href="/violoncello" className="link">
+                こちら
+              </Link>
+            </li>
           </ul>
 
           <h2 className="text-2xl md:text-left text-center mt-4">経歴</h2>
