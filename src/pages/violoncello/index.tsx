@@ -8,10 +8,8 @@ export default function Violoncello() {
       <main className="md:max-w-3xl mx-auto">
         <h1 className="text-4xl mb-8 py-2">Violoncello</h1>
         <div className="mx-auto md:max-w-lg mb-2">
-          <div className="flex justify-between items-center">
-            <h2>Impromptu Op.30</h2>
-            <audio src="/violoncello/Impromptu.mp3" controls />
-          </div>
+          <h2 className="p-2">Impromptu Op.30</h2>
+          <audio src="/violoncello/Impromptu.mp3" controls />
         </div>
       </main>
       <hr />
