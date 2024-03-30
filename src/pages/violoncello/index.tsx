@@ -8,8 +8,11 @@ export default function Violoncello() {
       <main className="md:max-w-3xl mx-auto">
         <h1 className="text-4xl mb-8 py-2">Violoncello</h1>
         <div className="mx-auto md:max-w-lg mb-2">
-          {/* <h2 className="p-2">Impromptu Op.30</h2> */}
-          <audio src="/audio_play_test_music.mp3" controls />
+          <h2 className="p-2">Impromptu Op.30</h2>
+          <audio
+            src="https://violoncello.s3.ap-northeast-1.amazonaws.com/Impromtu.mp3"
+            controls
+          />
         </div>
       </main>
       <hr />
