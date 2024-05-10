@@ -27,7 +27,7 @@ jobs:
         env:
           MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
           MICROCMS_SERVICE_DOMAIN: ${{ secrets.MICROCMS_SERVICE_DOMAIN }}
-        run: "pnpm install && pnpm build && pnpm export"
+        run: "pnpm install && pnpm build"
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:

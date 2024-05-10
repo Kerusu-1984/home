@@ -7,7 +7,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export",
     "new-blog": "today=date +'%Y-%m-%d' && touch ./articles/$today.md && mkdir ./public/blog/$today"
   },
   "packageManager": "pnpm@9.1.0",
