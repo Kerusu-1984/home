@@ -10,7 +10,7 @@
     "export": "next export",
     "new-blog": "today=date +'%Y-%m-%d' && touch ./articles/$today.md && mkdir ./public/blog/$today"
   },
-  "packageManager": "yarn@3.2.0",
+  "packageManager": "pnpm@9.1.0",
   "dependencies": {
     "@react-three/drei": "^9.34.4",
     "@react-three/fiber": "^8.8.10",
