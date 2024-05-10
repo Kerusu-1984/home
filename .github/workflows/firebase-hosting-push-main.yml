@@ -21,13 +21,13 @@ jobs:
           node-version-file: .tool-versions
 
       - name: enable corepack
-        run: "corepack enable yarn"
+        run: "corepack enable pnpm"
 
       - name: build
         env:
           MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
           MICROCMS_SERVICE_DOMAIN: ${{ secrets.MICROCMS_SERVICE_DOMAIN }}
-        run: " yarn install && yarn build && yarn export"
+        run: "pnpm install && pnpm build && pnpm export"
 
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
