@@ -3,8 +3,10 @@ import { NextSeo } from "next-seo";
 import { client } from "libs/client";
 import { Blog } from ".";
 
+const FETCH_LIMIT = 100;
+
 export const getStaticPaths = async () => {
-  const data = await client.get({ endpoint: "blog" });
+  const data = await client.get({ endpoint: "blog", queries: { limit: FETCH_LIMIT }});
   const paths = data.contents.map((content: any) => `/blog/${content.id}`);
   return { paths, fallback: false };
 };
