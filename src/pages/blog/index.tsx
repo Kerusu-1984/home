@@ -52,7 +52,7 @@ export default function Blog({
           {blog
             .slice(
               (currentPage - 1) * BLOG_PER_PAGE,
-              currentPage * BLOG_PER_PAGE - 1
+              currentPage * BLOG_PER_PAGE
             )
             .map((blog) => (
               <a
@@ -75,8 +75,7 @@ export default function Blog({
               </a>
             ))}
           <div className="join mx-auto">
-            {Array(totalPage)
-              .fill(0)
+            {[...Array(totalPage)]
               .map((_, i) => (
                 <button
                   className={`join-item btn ${
