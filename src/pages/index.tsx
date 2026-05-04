@@ -14,7 +14,7 @@ const Home: NextPage = () => {
         </div>
         <div className="profile my-auto md:text-left text-center">
           <p className="text-5xl font-semibold my-3">Kerusu</p>
-          <p>筑波大で情報を科学しています</p>
+          <p>筑波大で情報を科学していました</p>
           <div className="links my-3 text-2xl md:ml-4 text-left md:mx-0 mx-auto w-fit underline">
             <ul>
               <li>
